@@ -12,7 +12,6 @@ const GetDataMovies = () => {
         const {data} = await axios.get(`https://api.themoviedb.org/3/trending/all/day?api_key=${API_KEY}&page=${pageno}`)
         setContent(data.results)
         setPagination(data.total_pages)
-        console.log(data);
     }
     useEffect(()=>{
         getMoviesData()
